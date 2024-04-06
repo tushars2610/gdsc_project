@@ -33,7 +33,7 @@ class _SoilResultState extends State<SoilResult> {
         padding: const EdgeInsets.only(left: 10, right: 10),
         child: Column(
           children: [
-            SizedBox(height: 30),
+            const SizedBox(height: 30),
             Container(
               width: double.infinity,
               decoration: BoxDecoration(

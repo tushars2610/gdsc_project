@@ -27,7 +27,7 @@ class _MyAppState extends State<MyApp> {
   final List _pages = [
     const Home(),
     const CameraPage(),
-    const ChatBot(),
+     ChatPage(),
 
   ];
 
