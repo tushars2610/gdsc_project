@@ -1,5 +1,6 @@
 import 'dart:typed_data';
 import 'package:flutter/material.dart';
+import 'package:gdsc_app/questions/soil_prediction_result.dart';
 import 'package:tflite_flutter/tflite_flutter.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
@@ -137,6 +138,21 @@ class _SoilPredictionScreenState extends State<SoilPredictionScreen> {
 
     setState(() {
       prediction = 'Predicted Class: $predictedValue';
+    });
+
+    setState(() {
+      Navigator.push(
+        context,
+        ModalBottomSheetRoute(
+          builder: (context) => SoilResult(
+              predictResult: predictedValue,
+              feelTest: _feel,
+              vinegarTest: _vinegarTest,
+              wormPresence: _wormPresence,
+              organiMatter: _organicMatter),
+          isScrollControlled: true,
+        ),
+      );
     });
   }
 
