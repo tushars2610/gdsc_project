@@ -42,7 +42,7 @@ class _HomeState extends State<Home> {
           ),
         ),
       ),
-      body: SingleChildScrollView(
+      body: const SingleChildScrollView(
         child: Padding(
           padding: EdgeInsets.all(10),
           child: Column(
@@ -52,6 +52,8 @@ class _HomeState extends State<Home> {
                 height: 20,
               ),
               TypesOfFarming(),
+              SizedBox(height: 20),
+              Text("data")
             ],
           ),
         ),
@@ -72,6 +74,7 @@ List farmingTypes = [
   [
     "Commercial farming",
     "This type of farming is focused on producing food for sale. Commercial farms are typically larger than subsistence farms and use more advanced technologies.",
+    "assets/images/comercial_farming.jpg"
   ],
   [
     "Mixed farming",
@@ -114,25 +117,40 @@ class _TypesOfFarmingState extends State<TypesOfFarming> {
       items: farmingTypes
           .map(
             (item) => Container(
-              width: 400,
+              width: 500,
               decoration: BoxDecoration(
-                color: Colors.green,
+                image: const DecorationImage(
+                    image: AssetImage("assets/images/aeroponic.jpeg"),
+                    fit: BoxFit.fill),
                 borderRadius: BorderRadius.circular(15),
               ),
               child: Container(
                 decoration: BoxDecoration(
-                  color: Colors.black.withOpacity(0.5),
+                  color: Colors.black.withOpacity(0.3),
                   borderRadius: BorderRadius.circular(15),
                 ),
-                child: Column(
-                  children: [
-                    Text(
-                      item[0],
-                    ),
-                    Text(
-                      item[1],
-                    ),
-                  ],
+                child: Padding(
+                  padding: const EdgeInsets.all(5.0),
+                  child: Column(
+                    children: [
+                      Text(
+                        item[0],
+                        style: const TextStyle(
+                          fontSize: 18,
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                        ),
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                      Text(
+                        item[1],
+                        style: const TextStyle(
+                          fontSize: 12,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),
@@ -141,7 +159,7 @@ class _TypesOfFarmingState extends State<TypesOfFarming> {
       options: CarouselOptions(
         enlargeCenterPage: true,
         aspectRatio: 2.0,
-        autoPlay: false,
+        autoPlay: true,
         enableInfiniteScroll: true,
         viewportFraction: 0.8,
         animateToClosest: true,
