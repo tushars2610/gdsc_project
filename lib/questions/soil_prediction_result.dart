@@ -45,7 +45,8 @@ class _SoilResultState extends State<SoilResult> {
                 child: Column(
                   children: [
                     Text("Your prediction result is ${widget.predictResult}"),
-                    SizedBox(height: 20),
+                    const SizedBox(height: 20),
+                    OrganicMatter(showWidget: widget.organiMatter < 0.3)
                   ],
                 ),
               ),
@@ -59,7 +60,9 @@ class _SoilResultState extends State<SoilResult> {
 
 //-------------------------organic matter------------------
 class OrganicMatter extends StatefulWidget {
-  const OrganicMatter({super.key});
+  const OrganicMatter({super.key, required this.showWidget});
+
+  final bool showWidget;
 
   @override
   State<OrganicMatter> createState() => _OrganicMatterState();
@@ -68,29 +71,31 @@ class OrganicMatter extends StatefulWidget {
 class _OrganicMatterState extends State<OrganicMatter> {
   @override
   Widget build(BuildContext context) {
-    return const Column(
-      children: [
-        Text("Looks like your soil has low organic matter"),
-        SizedBox(
-          height: 10,
-        ),
-        Text("Here Are some ways to improve it"),
-        SizedBox(
-          height: 10,
-        ),
-        Text("Adding Organic Materials:"),
-        SizedBox(
-          height: 10,
-        ),
-        Text(
-            "Compost: This is a gardener's gold! Compost is decomposed organic matter teeming with beneficial microbes and nutrients. Regularly adding compost to your soil is an excellent way to boost organic matter content."
-            "\n"
-            "Mulch: Applying a layer of organic mulch (like shredded bark, wood chips, or leaves) around your plants helps retain moisture, suppress weeds, and gradually decomposes, adding organic matter to the soil over time."
-            "\n"
-            "Cover Crops: Planting cover crops during fallow periods is a fantastic strategy. These fast-growing plants are tilled back into the soil, adding organic matter and improving soil structure. Leguminous cover crops like clover also fix nitrogen in the soil, further enhancing its fertility."
-            "\n"
-            "Manure (optional): Manure from herbivores like cows, sheep, or horses can be a good source of organic matter. However, it's important to use aged manure to avoid burning plants or introducing weed seeds and pathogens.")
-      ],
-    );
+    return widget.showWidget
+        ? const Column(
+            children: [
+              Text("Looks like your soil has low organic matter"),
+              SizedBox(
+                height: 10,
+              ),
+              Text("Here Are some ways to improve it"),
+              SizedBox(
+                height: 10,
+              ),
+              Text("Adding Organic Materials:"),
+              SizedBox(
+                height: 10,
+              ),
+              Text(
+                  "Compost: This is a gardener's gold! Compost is decomposed organic matter teeming with beneficial microbes and nutrients. Regularly adding compost to your soil is an excellent way to boost organic matter content."
+                  "\n"
+                  "Mulch: Applying a layer of organic mulch (like shredded bark, wood chips, or leaves) around your plants helps retain moisture, suppress weeds, and gradually decomposes, adding organic matter to the soil over time."
+                  "\n"
+                  "Cover Crops: Planting cover crops during fallow periods is a fantastic strategy. These fast-growing plants are tilled back into the soil, adding organic matter and improving soil structure. Leguminous cover crops like clover also fix nitrogen in the soil, further enhancing its fertility."
+                  "\n"
+                  "Manure (optional): Manure from herbivores like cows, sheep, or horses can be a good source of organic matter. However, it's important to use aged manure to avoid burning plants or introducing weed seeds and pathogens.")
+            ],
+          )
+        : const Text("Your orgeanic matter content is high");
   }
 }
