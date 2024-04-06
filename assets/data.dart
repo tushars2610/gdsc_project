@@ -1,4 +1,4 @@
-List statesData = [
+List statesCrop = [
   [
     "Andhra Pradesh",
     "500-1200 mm",
@@ -15,7 +15,7 @@ List statesData = [
     "Maize",
     "Millet",
     "Wheat",
-    "Pulses"
+    "Soybean, Pigeon Pea"
   ],
   [
     "Assam",
@@ -23,8 +23,8 @@ List statesData = [
     "Rice",
     "Tea",
     "Jute",
-    "Pulses",
-    "Sugarcane",
+    "Lentil, Black Gram",
+    "Sugarcane"
   ],
   [
     "Bihar",
@@ -32,17 +32,17 @@ List statesData = [
     "Rice",
     "Wheat",
     "Maize",
-    "Pulses",
-    "Sugarcane",
+    "Lentil, Pigeon Pea",
+    "Sugarcane"
   ],
   [
     "Chhattisgarh",
     "800-1200 mm",
     "Rice",
     "Wheat",
-    "Pulses",
-    "Oilseeds",
-    "Maize",
+    "Gram, Pigeon Pea",
+    "Soybean, Mustard",
+    "Maize"
   ],
   [
     "Goa",
@@ -50,18 +50,10 @@ List statesData = [
     "Rice",
     "Cashew Nuts",
     "Coconuts",
-    "Fruits",
-    "Vegetables"
+    "Mango, Pineapple",
+    "Cucumber, Okra"
   ],
-  [
-    "Gujarat",
-    "300-800 mm",
-    "Cotton",
-    "Groundnut",
-    "Wheat",
-    "Rice",
-    "Bajra",
-  ],
+  ["Gujarat", "300-800 mm", "Cotton", "Groundnut", "Wheat", "Rice", "Bajra"],
   [
     "Haryana",
     "300-700 mm",
@@ -69,7 +61,7 @@ List statesData = [
     "Rice",
     "Cotton",
     "Sugarcane",
-    "Oilseeds",
+    "Mustard, Chickpea"
   ],
   [
     "Himachal Pradesh",
@@ -77,8 +69,8 @@ List statesData = [
     "Wheat",
     "Maize",
     "Rice",
-    "Pulses",
-    "Fruits",
+    "Lentil, Chickpea",
+    "Apple, Plum, Apricot"
   ],
   [
     "Jharkhand",
@@ -86,8 +78,8 @@ List statesData = [
     "Rice",
     "Wheat",
     "Maize",
-    "Pulses",
-    "Oilseeds",
+    "Pigeon Pea, Lentil",
+    "Tomato, Cauliflower"
   ],
   [
     "Karnataka",
@@ -96,23 +88,15 @@ List statesData = [
     "Ragi",
     "Jowar",
     "Maize",
-    "Pulses",
+    "Pigeon Pea, Green Gram"
   ],
-  [
-    "Kerala",
-    "1500-3000 mm",
-    "Rice",
-    "Coconut",
-    "Rubber",
-    "Tea",
-    "Coffee",
-  ],
+  ["Kerala", "1500-3000 mm", "Rice", "Coconut", "Rubber", "Tea", "Coffee"],
   [
     "Madhya Pradesh",
     "600-1000 mm",
     "Wheat",
     "Soybean",
-    "Pulses",
+    "Gram, Pigeon Pea",
     "Rice",
     "Cotton"
   ],
@@ -123,52 +107,52 @@ List statesData = [
     "Soybean",
     "Jowar",
     "Bajra",
-    "Wheat"
+    "Pigeon Pea, Green Gram"
   ],
   [
     "Manipur",
     "1000-2000 mm",
     "Rice",
-    "Fruits",
-    "Vegetables",
-    "Oilseeds",
-    "Pulses"
+    "Pineapple, Banana",
+    "Cabbage, Tomato",
+    "Soybean",
+    "Black Gram"
   ],
   [
     "Meghalaya",
     "2000-12000 mm",
     "Rice",
     "Maize",
-    "Pulses",
-    "Oilseeds",
-    "Fruits"
+    "Black Gram, Green Gram",
+    "Soybean",
+    "Citrus, Pineapple"
   ],
   [
     "Mizoram",
     "2000-3000 mm",
     "Rice",
     "Maize",
-    "Pulses",
-    "Oilseeds",
-    "Fruits",
+    "Black Gram, Green Gram",
+    "Soybean",
+    "Banana, Pineapple"
   ],
   [
     "Nagaland",
     "1500-2500 mm",
     "Rice",
     "Maize",
-    "Pulses",
-    "Oilseeds",
-    "Fruits",
+    "Black Gram, Green Gram",
+    "Soybean",
+    "Banana, Pineapple"
   ],
   [
     "Odisha",
     "1000-1600 mm",
     "Rice",
-    "Pulses",
-    "Oilseeds",
-    "Vegetables",
-    "Fruits",
+    "Pigeon Pea, Green Gram",
+    "Groundnut, Mustard",
+    "Brinjal, Tomato",
+    "Mango, Banana"
   ],
   [
     "Punjab",
@@ -177,7 +161,7 @@ List statesData = [
     "Rice",
     "Cotton",
     "Sugarcane",
-    "Fruits",
+    "Chickpea, Lentil"
   ],
   [
     "Rajasthan",
@@ -185,8 +169,8 @@ List statesData = [
     "Bajra",
     "Wheat",
     "Mustard",
-    "Pulses",
-    "Cotton",
+    "Gram, Green Gram",
+    "Cotton"
   ],
   [
     "Sikkim",
@@ -194,15 +178,15 @@ List statesData = [
     "Rice",
     "Maize",
     "Millet",
-    "Fruits",
-    "Vegetables",
+    "Orange, Guava",
+    "Cabbage, Radish"
   ],
   [
     "Tamil Nadu",
     "600-1800 mm",
     "Rice",
     "Groundnut",
-    "Pulses",
+    "Pigeon Pea, Black Gram",
     "Cotton",
     "Sugarcane"
   ],
@@ -212,17 +196,17 @@ List statesData = [
     "Rice",
     "Cotton",
     "Maize",
-    "Pulses",
-    "Oilseeds",
+    "Pigeon Pea, Green Gram",
+    "Sunflower, Soybean"
   ],
   [
     "Tripura",
     "2000-3000 mm",
     "Rice",
-    "Fruits",
-    "Vegetables",
-    "Pulses",
-    "Oilseeds"
+    "Pineapple, Banana",
+    "Cabbage, Tomato",
+    "Black Gram, Green Gram",
+    "Soybean"
   ],
   [
     "Uttar Pradesh",
@@ -230,17 +214,17 @@ List statesData = [
     "Wheat",
     "Rice",
     "Sugarcane",
-    "Pulses",
-    "Oilseeds"
+    "Pigeon Pea, Lentil",
+    "Mustard, Groundnut"
   ],
   [
     "Uttarakhand",
     "800-1500 mm",
     "Rice",
     "Wheat",
-    "Pulses",
-    "Fruits",
-    "Vegetables"
+    "Lentil, Horse Gram",
+    "Litchi, Mango",
+    "Potato, Pea"
   ],
   [
     "West Bengal",
@@ -249,60 +233,60 @@ List statesData = [
     "Jute",
     "Tea",
     "Potato",
-    "Fruits",
+    "Banana, Mango"
   ],
   [
     "Andaman and Nicobar Islands",
     "2500-3500 mm",
     "Rice",
     "Coconut",
-    "Fruits",
-    "Vegetables",
-    "Spices"
+    "Banana, Mango",
+    "Cucumber, Pumpkin",
+    "Black Pepper, Clove"
   ],
   [
     "Chandigarh",
     "600-800 mm",
     "Wheat",
     "Rice",
-    "Fruits",
-    "Vegetables",
-    "Pulses"
+    "Guava, Mango",
+    "Potato, Cauliflower",
+    "Lentil, Chickpea"
   ],
   [
     "Dadra and Nagar Haveli and Daman and Diu",
     "1000-2000 mm",
     "Rice",
-    "Fruits",
-    "Vegetables",
-    "Oilseeds",
-    "Pulses"
+    "Mango, Chikoo",
+    "Brinjal, Tomato",
+    "Pigeon Pea, Green Gram",
+    "Groundnut"
   ],
   [
     "Delhi",
     "600-800 mm",
     "Wheat",
     "Rice",
-    "Fruits",
-    "Vegetables",
-    "Pulses",
+    "Guava, Mango",
+    "Potato, Cauliflower",
+    "Lentil, Chickpea"
   ],
   [
     "Lakshadweep",
     "1000-2000 mm",
     "Coconut",
-    "Fruits",
-    "Vegetables",
-    "Pulses",
-    "Oilseeds"
+    "Banana, Mango",
+    "Cucumber, Pumpkin",
+    "Pigeon Pea, Green Gram",
+    "Groundnut"
   ],
   [
     "Puducherry",
     "1000-1500 mm",
     "Rice",
-    "Fruits",
-    "Vegetables",
-    "Pulses",
-    "Oilseeds"
+    "Mango, Guava",
+    "Brinjal, Tomato",
+    "Black Gram, Green Gram",
+    "Groundnut"
   ]
 ];
