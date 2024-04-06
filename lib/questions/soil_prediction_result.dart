@@ -31,27 +31,30 @@ class _SoilResultState extends State<SoilResult> {
       ),
       body: Padding(
         padding: const EdgeInsets.only(left: 10, right: 10),
-        child: Column(
-          children: [
-            const SizedBox(height: 30),
-            Container(
-              width: double.infinity,
-              decoration: BoxDecoration(
-                color: Colors.green.withOpacity(0.2),
-                borderRadius: BorderRadius.circular(15),
-              ),
-              child: Padding(
-                padding: const EdgeInsets.all(5),
-                child: Column(
-                  children: [
-                    Text("Your prediction result is ${widget.predictResult}"),
-                    const SizedBox(height: 20),
-                    OrganicMatter(showWidget: widget.organiMatter < 0.3)
-                  ],
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              const SizedBox(height: 30),
+              Container(
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  color: Colors.green.withOpacity(0.2),
+                  borderRadius: BorderRadius.circular(15),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(5),
+                  child: Column(
+                    children: [
+                      Text("Your prediction result is ${widget.predictResult}"),
+                      const SizedBox(height: 20),
+                      OrganicMatter(showWidget: widget.organiMatter < 0.3),
+                      WormPresence(isWormPresent: widget.wormPresence==0),
+                    ],
+                  ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
@@ -97,5 +100,48 @@ class _OrganicMatterState extends State<OrganicMatter> {
             ],
           )
         : const Text("Your orgeanic matter content is high");
+  }
+}
+
+//----------------------------worm presence------------------
+
+class WormPresence extends StatefulWidget {
+  const WormPresence({super.key, required this.isWormPresent});
+
+  final bool isWormPresent;
+
+  @override
+  State<WormPresence> createState() => _WormPresenceState();
+}
+
+class _WormPresenceState extends State<WormPresence> {
+  @override
+  Widget build(BuildContext context) {
+    return widget.isWormPresent
+        ? const Column(
+            children: [
+              Text("Looks like your soil has less worm presence"),
+              SizedBox(
+                height: 10,
+              ),
+              Text("Here Are some ways to improve it"),
+              SizedBox(
+                height: 10,
+              ),
+              Text("Create a Worm-Friendly Habitat"),
+              SizedBox(
+                height: 10,
+              ),
+              Text(
+                  "Moisture is key: Earthworms are about 80% water, so consistent moisture is crucial. Water your soil regularly, but avoid waterlogging, which can drown them"
+                  "\n"
+                  "Organic buffet: Worms feed on decomposing organic matter. Regularly add compost, shredded leaves, or other organic materials to your soil. This food source will attract and sustain them."
+                  "\n"
+                  "Minimize tilling: Excessive tilling disrupts worm burrows and destroys their habitat. Consider no-till or reduced tillage practices to create a stable environment for them."
+                  "\n"
+                  "Mulch matters: Apply a layer of organic mulch (like shredded bark, wood chips, or leaves) around your plants. This helps retain moisture, keeps the soil cool, and provides a food source for worms as it decomposes.")
+            ],
+          )
+        : const Text("Worm presence is good");
   }
 }
