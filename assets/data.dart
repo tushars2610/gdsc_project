@@ -1,4 +1,4 @@
-states_data = [
+statesCrop = [
 ["Andhra Pradesh", "500-1200 mm", "Rice", "Groundnut", "Sugarcane", "Cotton", "Tobacco"],
 ["Arunachal Pradesh", "1500-4000 mm", "Rice", "Maize", "Millet", "Wheat", "Soybean, Pigeon Pea"],
 ["Assam", "1500-3000 mm", "Rice", "Tea", "Jute", "Lentil, Black Gram", "Sugarcane"],
